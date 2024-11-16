@@ -11,7 +11,6 @@
 }
 body{
     margin: 0;
-    overflow-y: hidden;
     background-image: url(xoxo2\ \(1\).jpg);
     background-repeat: no-repeat;
     background-size:cover;
@@ -159,4 +158,39 @@ body{
 .winning-message.show
 {
     display: flex !important;
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    :root {
+        --cell-size: 80px;
+        --mark-size: calc(var(--cell-size) * .9);
+    }
+    .title {
+        font-size: 12vw;
+    }
+    .winning-message {
+        font-size: 4rem;
+    }
+    .winning-message button {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --cell-size: 60px;
+        --mark-size: calc(var(--cell-size) * .9);
+    }
+    .title {
+        font-size: 15vw;
+    }
+    .winning-message {
+        font-size: 3rem;
+        padding: 20px;
+        text-align: center;
+    }
+    .winning-message button {
+        font-size: 1.5rem;
+        padding: .5em 1em;
+    }
 }
